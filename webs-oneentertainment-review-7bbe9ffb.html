@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>壹号娱乐 · 专题介绍</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f2f2f1;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            color: #1f1f1f;
+            line-height: 1.6;
+            padding: 2rem 1.2rem;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .hero {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 3.5rem 2.5rem 3rem 2.5rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02), 0 1px 3px rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(0, 0, 0, 0.03);
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 450;
+            letter-spacing: -0.01em;
+            color: #1a1a1a;
+            margin-bottom: 0.75rem;
+        }
+
+        .hero .sub {
+            font-size: 1.1rem;
+            color: #5f5f5f;
+            max-width: 540px;
+            margin: 0 auto 2rem auto;
+            border-bottom: 1px solid #e6e6e6;
+            padding-bottom: 1.5rem;
+        }
+
+        .hero .tagline {
+            display: inline-block;
+            background: #f0efed;
+            padding: 0.4rem 1.2rem;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            color: #3b3b3b;
+            border: 1px solid #dfdfde;
+        }
+
+        /* 卡片通用 */
+        .card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 2.5rem 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            transition: box-shadow 0.15s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.03);
+        }
+
+        .card h2 {
+            font-size: 1.6rem;
+            font-weight: 430;
+            letter-spacing: -0.01em;
+            margin-bottom: 1.2rem;
+            color: #222;
+            border-left: 3px solid #b3b3b3;
+            padding-left: 1rem;
+        }
+
+        .card p {
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
+            color: #2d2d2d;
+        }
+
+        .card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .card .highlight {
+            background: #f8f7f5;
+            padding: 0.2rem 0.6rem;
+            border-radius: 6px;
+            font-weight: 400;
+        }
+
+        .two-column {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .two-column .card {
+            flex: 1;
+            margin-bottom: 0;
+        }
+
+        .faq-mini {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 2rem 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(0, 0, 0, 0.04);
+        }
+
+        .faq-mini h3 {
+            font-size: 1.2rem;
+            font-weight: 420;
+            margin-bottom: 1.2rem;
+            color: #333;
+            border-bottom: 1px solid #ebebea;
+            padding-bottom: 0.6rem;
+        }
+
+        .faq-item {
+            margin-bottom: 1rem;
+        }
+
+        .faq-item strong {
+            display: block;
+            font-weight: 500;
+            color: #1e1e1e;
+            margin-bottom: 0.2rem;
+        }
+
+        .faq-item p {
+            color: #4a4a4a;
+            font-size: 0.95rem;
+            margin-left: 0;
+        }
+
+        .footer-note {
+            text-align: center;
+            padding: 2.5rem 0 1rem 0;
+            font-size: 0.95rem;
+            color: #6b6b6b;
+            border-top: 1px solid #e0dfde;
+            margin-top: 1.5rem;
+        }
+
+        .footer-note a {
+            color: #1f1f1f;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-color: #cacaca;
+            font-weight: 420;
+        }
+
+        .footer-note a:hover {
+            text-decoration-color: #888;
+        }
+
+        .inline-link {
+            color: #1f1f1f;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-color: #bfbfbf;
+        }
+
+        .inline-link:hover {
+            text-decoration-color: #5f5f5f;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 1.2rem 1rem;
+            }
+            .hero {
+                padding: 2rem 1.5rem;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .card {
+                padding: 1.8rem 1.2rem;
+            }
+            .two-column {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            .two-column .card {
+                margin-bottom: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero 横幅 -->
+    <div class="hero">
+        <h1>壹号娱乐</h1>
+        <div class="sub">一个你可以快速判断用途的线上空间</div>
+        <span class="tagline">娱乐 · 资讯 · 聚合</span>
+    </div>
+
+    <!-- 背景说明 卡片 -->
+    <div class="card">
+        <h2>从名称开始理解</h2>
+        <p>
+            许多人在初次看到「壹号娱乐」时，会自然联想到它与娱乐内容之间的关联。网站本身并不故弄玄虚——它的定位直接写在名字里：一个围绕休闲、文娱与信息获取的聚合页面。没有复杂的层级，也没有刻意的包装，你进入后很快就能感知到它想提供什么。
+        </p>
+        <p>
+            作为一家面向中文用户的娱乐内容入口，<a href="https://webs-oneentertainment.com" class="inline-link">壹号娱乐</a> 更倾向于让来访者自行浏览与判断。这种克制本身，也是一种清晰的态度。
+        </p>
+    </div>
+
+    <!-- 三段自然介绍 (卡片) -->
+    <div class="card">
+        <h2>浏览者看到的几个侧面</h2>
+        <p>
+            <span class="highlight">· 内容方向</span> 网站主要聚合了与影视、综艺、音乐、游戏以及泛娱乐话题相关的信息链接与推荐。它不生产深度报道，更接近于一个经过筛选的导航式页面，适合快速了解当前有哪些值得关注的娱乐动态。
+        </p>
+        <p>
+            <span class="highlight">· 使用场景</span> 如果你只是想在闲暇时随便看看有什么新鲜事，或者想找一个不太嘈杂的信息汇集点，这里可能比社交媒体的时间线更省力。页面结构简单，不追求用算法无限推送。
+        </p>
+        <p>
+            <span class="highlight">· 设计语言</span> 整体采用浅色背景与低对比度的卡片分区，视觉上温和且不刺眼。细边框与柔和阴影让每个模块独立但不突兀，阅读节奏可以由你自己控制。
+        </p>
+    </div>
+
+    <!-- 双列卡片：特点 + 场景(微调) -->
+    <div class="two-column">
+        <div class="card">
+            <h2>特点</h2>
+            <p>
+                没有弹窗干扰，没有强制注册的入口。信息以静态列表和简短描述为主，你可以逐条看过，也可以挑选感兴趣的标签进一步了解。更新频率适中，不追求日更数百条，但内容保持基本的新鲜度。
+            </p>
+        </div>
+        <div class="card">
+            <h2>适合哪些人</h2>
+            <p>
+                适合希望快速识别网站用途而不想花费太多精力去“破译”的人。也适合那些对娱乐资讯有轻度需求，但不想被大数据推荐算法裹挟的浏览者。简单来说：如果只是想知道最近有什么可看的、可听的，这里是一个不错的起点。
+            </p>
+        </div>
+    </div>
+
+    <!-- FAQ 摘要 卡片 -->
+    <div class="faq-mini">
+        <h3>常见问题摘要</h3>
+        <div class="faq-item">
+            <strong>这个网站是做什么的？</strong>
+            <p>主要提供娱乐相关的信息聚合与导航，帮助浏览者快速找到自己感兴趣的影视、音乐、综艺等内容。</p>
+        </div>
+        <div class="faq-item">
+            <strong>需要注册或付费吗？</strong>
+            <p>目前页面上的所有内容均为公开可读，不需要注册或付费。</p>
+        </div>
+        <div class="faq-item">
+            <strong>内容更新频率如何？</strong>
+            <p>保持定期更新，但不会过于频繁。具体节奏由运营方决定。</p>
+        </div>
+    </div>
+
+    <!-- 页尾访问提示 -->
+    <div class="footer-note">
+        如果你想进一步了解或直接浏览，可以前往 <a href="https://webs-oneentertainment.com">壹号娱乐</a>。<br>
+        页面内容仅供介绍参考，所有信息以网站实际呈现为准。
+    </div>
+
+</body>
+</html>
